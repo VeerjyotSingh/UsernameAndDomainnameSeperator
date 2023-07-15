@@ -2,7 +2,7 @@ import os
 from tkinter import *
 import tkinter as tk
 
-
+labels = {}
 os.system('cls||clear')
 r = tk.Tk()
 r.minsize(width=400,height=200)
@@ -24,13 +24,11 @@ def cal():
         h="Your Domain is "+y[1]
         print(g)
         print(h)
-        Label(r, text=g, font=("arial italic", 18) ).pack()
-
-        Label(r, text=h, font=("arial italic", 18) ).pack()
+        l1 = Label(r, text=g, font=("arial italic", 18) ).pack()
+        l2 = Label(r, text=h, font=("arial italic", 18) ).pack()
     else:
         print("An error occured")
-
-
+        l1 = Label(r, text="Invalid Email", font=("arial italic", 18) ).pack()
 x_var = ""
 r.title('User and Domain name splitter')
 Label(r, text='Email id').pack()
